@@ -40,7 +40,7 @@ app.get('/list', (req, res) => {
   const uploadedFiles = db.find().map(file => file.toPublicJSON());
 
   res.set('content-type', 'application/json');
-  return res.json({ uploadedFiles });
+  return res.json(uploadedFiles);
 });
 
 app.get('/image/:id', (req, res) => {

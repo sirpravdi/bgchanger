@@ -53,8 +53,6 @@ class Database extends EventEmitter {
   find() {
     let allImages = Object.values(this.uploadedImages);
 
-    console.log(this.uploadedImages);
-
     allImages.sort((img1, img2) => (img2.uploadedAt -  img1.uploadedAt));
 
     return allImages;
